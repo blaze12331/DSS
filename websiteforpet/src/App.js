@@ -13,6 +13,7 @@ import LoginForm from "./components2/LoginForm";
 import PetList from "./components2/PetList";
 import Event from "./components2/Event";
 import AdoptionList from "./components2/AdoptionList";
+import History from "./components2/History";
 
 const App = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/petlist" element={<PetList />} />
           <Route path="/event" element={<Event />} />
           <Route path="/adopt-list" element={<AdoptionList />} />
+          <Route path="/history" element={<History />} />
 
           {/* Routes with Header */}
           <Route
