@@ -176,6 +176,7 @@ const PetList = () => {
               </label>
               {editPet.image && (
                 <div className="image-preview-box">
+                <p className="image-size-hint">Preview (Max: 150x150 pixels)</p>
                   <img src={editPet.image} alt="Preview" className="image-preview" />
                 </div>
               )}

@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import "./Header1.css"; // External stylesheet for styling
 import DSSLogo from "../assets/DSS (1).png"; // Import DSS.png image
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Header = () => {
-  // State to track the active link
   const [activeLink, setActiveLink] = useState("Manage Pets");
+
+  // Initialize the useNavigate hook
+  const navigate = useNavigate();
+
+  // Handle logout
+  const handleLogout = () => {
+    // Perform any logout logic here (e.g., clearing session storage, tokens, etc.)
+    // Then navigate to the login page
+    navigate("/login");
+  };
 
   return (
     <header className="header-container">
@@ -46,7 +55,7 @@ const Header = () => {
       </nav>
       <div className="user-actions">
         <div className="profile-icon"></div>
-        <button className="logout-btn">Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
     </header>
   );

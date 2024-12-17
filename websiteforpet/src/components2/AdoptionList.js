@@ -12,7 +12,6 @@ const AdoptionList = () => {
     description: "Friendly and energetic golden retriever", // Description
     applicantName: "John Doe", // Applicant's Name
     email: "johndoe@email.com", // Applicant's Email
-    reason: "I want to adopt a loving dog for my family.", // Reason for adoption
     imageUrl:
       "https://images.unsplash.com/photo-1560807707-8cc77767d783", // Placeholder image
   });
@@ -55,7 +54,6 @@ const AdoptionList = () => {
                   <br />
                   Email: <span className="al-email">{app.email}</span>
                 </p>
-                <p className="al-reason">Reason: {app.reason}</p>
 
                 {/* Action Buttons */}
                 <div className="al-action-buttons">
